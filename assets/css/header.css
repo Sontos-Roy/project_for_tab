@@ -1,0 +1,126 @@
+@import url(fonts.css);
+header{
+    width: 100%;
+    border-bottom: 2px solid #cecece;
+}
+header .profile-right-header{
+    width: 280px;       
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    
+}
+header .profile-right-header .image{
+    width: 60px;
+    height: 60px;
+    border: 2px salmon solid;
+    border-radius: 50px;
+    overflow: hidden;
+    
+}
+header .profile-right-header .image img{
+    width: 100%;
+}
+header .profile-right-header h4{
+    font-family: poppins-semibold;
+    margin: 0;
+}
+
+
+/* Left sidebar start  */
+.dismiss-btn{
+    display: none;
+  }
+.left-sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: white;
+    width: 260px;
+    border-right: 2px solid #cecece;
+    overflow-y: auto;
+    max-height: 100vh;
+    min-height: 100vh;
+    transition: 0.5s;
+    z-index: 1080;
+}
+.left-sidebar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  
+.left-sidebar::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  
+.left-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+.left-sidebar .image{
+    width: 60px;
+    height: 60px;
+    border: 2px salmon solid;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: 20px;
+}
+.left-sidebar .image img{
+    width: 100%;
+}
+.left-sidebar ul.sidebar-ul{
+    padding: 0;
+    list-style: none;
+}
+.left-sidebar ul.sidebar-ul li{
+    list-style: none;
+    text-align: center;
+    padding: 10px 25px;
+    border-bottom: 2px #cecece solid;
+}
+.left-sidebar ul.sidebar-ul li a{
+    text-decoration: none;
+    color: rgb(90, 90, 90);
+    font-size: 23px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: poppins-bold;
+}
+.left-sidebar ul.sidebar-ul li a.active{
+    color: rgb(13, 178, 255);
+}
+
+
+/* Left sidebar end  */
+
+.left-side{
+    width: 260px;
+}
+.right-side{
+    width: 250px;
+    border-left: 2px #cecece solid;
+}
+.main-content .middle{
+    flex-grow: 1;
+    width: 600px;
+    overflow: hidden;
+}
+
+/* Right Side Start  */
+.right-side{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.right-side .dropdown-toggle{
+    margin-left: 10px;
+}
+.dropdown-toggle::after{
+    position: absolute;
+    right: 0;
+    font-size: 30px;
+    top: 8px;
+}
+.right-side strong{
+    font-weight: bold;
+}
+/* Right Side End  */
