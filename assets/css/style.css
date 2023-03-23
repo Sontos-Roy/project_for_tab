@@ -256,3 +256,10 @@
 .c-product .title{
     line-height: 1.8;
 }
+.order-now-btn{
+    font-family: var(--pop-bold);
+    color: white;
+    background-color: rgba(255, 145, 0, 0.993);
+    border-radius: 30px;
+    margin-top: 20px;
+}
