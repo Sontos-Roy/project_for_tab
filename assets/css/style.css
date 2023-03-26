@@ -212,6 +212,9 @@
 .product-row .product .image img{
     width: 100%;
 }
+.product-row .product .product-content{
+    padding-bottom: 10px;
+}
 .product-row .product .product-content .title{
     font-size: 18px;
     font-weight: bold;
