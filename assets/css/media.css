@@ -27,6 +27,9 @@
   .right-side-arrow, .right-side-arrow-close{
     display: block;
   }
+  .right-side .first-div{
+    padding-top: 20px;
+  }
   .right-side{
     position: fixed;
     right: -280px;
@@ -69,6 +72,9 @@
   }
   .right-side-arrow, .right-side-arrow-close{
     display: block;
+  }
+  .right-side .first-div{
+    padding-top: 20px;
   }
   .right-side{
     position: fixed;
