@@ -46,4 +46,34 @@ $(document).ready(function(){
       }
       $counter.text(counterValue.toFixed(1));
     });
+    
+
+
+// Bind the togglePosition function to a click event on a button or some other trigger element
+$('.bottom-section .top-arrow').on('click', function(){
+  $(this).parent('.bottom-section').toggleClass('active');
+});
+
+});
+$(document).ready(function() {
+  $('.subcategory-menu').hide();
+  $('#category-menu li a').on('click', function(e) {
+    e.preventDefault();
+    $('#category-menu li .subcategory-menu').slideUp(); 
+    $(this).parent().children('.subcategory-menu').slideToggle();
+  });
+  
+  $('li.category-li').find('a').on('click', function(){
+        	
+        $(this).parent('.category-li').siblings().children('ul').slideUp('fast');
+        $(this).parent('.category-li').siblings().removeClass('active');
+        $(this).parent('.category-li').children('ul').slideToggle('fast');
+        $(this).parent('.category-li').toggleClass('active');
+
+    });
+    $('li.category-li > ul > li > a').on('click', function(e){
+    e.preventDefault();
+    $('li.category-li > ul > li > a').removeClass('active');
+    $(this).addClass('active');
+    });
 });
