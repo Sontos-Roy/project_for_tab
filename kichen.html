@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/kichen.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <script src="assets/js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="main-wrapper">
+        <header>
+            <div class="profile-right-header ms-auto">
+                
+                <div class="image">
+                    <img src="https://picsum.photos/200/200" alt="">
+                </div>
+                <h4>Kichen </h4>
+                <div class="logout pe-4">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#f90000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17l5-5-5-5M19.8 12H9M10 3H4v18h6"/></svg>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="left-sidebar" id="left-sidebar">
+            <div class="d-flex align-items-center justify-content-between">
+                <div class="image">
+                    <img src="https://picsum.photos/200/200" alt="">
+                </div>
+                <div class="dismiss-btn p-2" id="dismiss-btn">
+                    <h1><i class="far fa-times-circle"></i></h1>
+                </div>
+            </div>
+            <ul class="sidebar-ul">
+                <li>
+                    <a href="#" class="active">Order :- 1</a>
+                </li>
+                <li>
+                    <a href="/" class="">Order Return :- 0</a>
+                </li>
+                <li>
+                    <a href="#" class="">Transfer Requisition</a>
+                </li>
+                <li class="active-red">
+                    <a href="#">Refresh</a>
+                </li>
+                
+                
+            </ul>
+        </div>
+        <div class="row justify-content-between main-content mro-0">
+            <div class="left-side"></div>
+            <div class="middle col-md col-12 pe-0 ps-0">
+                
+                <div class="product-list mt-1 container">
+                        <div class="text-center">
+                            <h4 class="list-title">Order List</h4>
+                        </div>
+                    <div class="table-responsive">
+                        <table class="table order-list-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col"><h5 class="list-title text-center">Invoice</h5></th>
+                                    <th scope="col"><h5 class="list-title text-center">Table</h5></th>
+                                    <th scope="col"><h5 class="list-title text-center">Chair</h5></th>
+                                    <th scope="col"><h5 class="list-title text-center">Waiter</h5></th>
+                                    <th scope="col"><h5 class="list-title text-center">Amount</h5></th>
+                                    <th scope="col"><h5 class="list-title text-center">Total Product</h5></th>
+                                    <th scope="col"><h5 class="list-title text-center">Complete</h5></th>
+                                    <th scope="col"><h5 class="list-title text-center">Recipe Status</h5></th>
+                                    <th scope="col"><h5 class="list-title text-center">Action</h5></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td scope="row">1652662</td>
+                                    <td>CIP2-06</td>
+                                    <td>1B</td>
+                                    <td>Chalet</td>
+                                    <td>৳2000</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                    <td class="bg-warning"><a href="#" class="text-decoration-none text-dark">Not Finished</a></td>
+                                    <td class="bg-light-green"><a href="#order-show" data-bs-toggle="modal" class="text-decoration-none text-dark py-2">Order Details</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+
+
+
+        
+    </div>
+    <div class="bottom-section active">
+        <button class="btn top-arrow"><i class="fas fa-angle-double-up"></i></button>
+
+    </div>
+    <div class="left-side-arrow" id="left-side-arrow">
+        <div class="icon">
+            <i class="fas fa-arrow-right"></i>
+        </div>
+    </div>
+    <div class="right-side-arrow" id="right-side-arrow">
+        <div class="icon">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+    </div>
+    
+    
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade" id="order-show" tabindex="-1" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header row text-center">
+                    <div class="col-12 d-flex justify-content-between">
+                        <div></div>
+                    <h5 class="modal-title list-title" id="">Order Details</h5>
+                        <button type="button" class="m-0 btn-close rounded-circle bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-lg col-12 text-start">
+                                <h6 class="bold">Invoice No: <span>156236</span></h6>
+                                <h6 class="bold">Status: <span>Not Finished</span></h6>
+                                <h6 class="bold">Payment Status: <span>Due</span></h6>
+                            </div>
+                            <div class="col-lg"></div>
+                            <div class="col-lg col-12 text-start">
+                                <h6 class="bold">Customer: <span>Walk-In Customer</span></h6>
+                                <h6 class="bold">Address: <span></span></h6>
+                                <h6 class="bold">Waiter: <span>Chalet</span></h6>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-body">
+                    <div class="orders modal-order kichen-modal-box">
+                        <div class="table-responsive">
+                            <table class="table order-list-table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">
+                                            <h6 class="list-title text-center">
+                                              <input class="form-check-input shadow-none" type="checkbox" value="" id="checkall">
+                                              <label class="form-check-label block-select pt-1" for="checkall">
+                                                Check All
+                                              </label>
+                                            </h6>
+                                        </th>
+                                        <th scope="col"><h6 class="list-title text-center">Product</h6></th>
+                                        <th scope="col"><h6 class="list-title text-center">Quantity</h6></th>
+                                        <th scope="col"><h6 class="list-title text-center">Unit Price</h6></th>
+                                        <th scope="col"><h6 class="list-title text-center">Price Inc. Tex</h6></th>
+                                        <th scope="col"><h6 class="list-title text-center">Sub Total</h6></th>
+                                        <th scope="col"><h6 class="list-title text-center">Status</h6></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="">
+                                        <td scope="row"><input type="checkbox" class="form-check-input mark-check shadow-none"></td>
+                                        <td>Thai Clear Soup</td>
+                                        <td>1.0</td>
+                                        <td>450.00</td>
+                                        <td>450.00</td>
+                                        <td>450.00</td>
+                                        <td>Pending</td>
+                                    </tr>
+                                    <tr class="">
+                                        <td scope="row"><input type="checkbox" class="form-check-input mark-check shadow-none"></td>
+                                        <td>Thai Clear Soup</td>
+                                        <td>1.0</td>
+                                        <td>450.00</td>
+                                        <td>450.00</td>
+                                        <td>450.00</td>
+                                        <td>Pending</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="text-center pb-3 px-3 row">
+                    <a href="#" class="col p-2 m-2 text-light btn btn-info bold">Preparing</a>
+                    <a href="#" class="col p-2 m-2 btn btn-danger bold">Complete</a>
+                    <a href="#" class="col p-2 m-2 btn btn-primary bold">Order Cancel</a>
+                    <a href="#" class="col p-2 m-2 text-light btn btn-info bold">Order Print</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Optional: Place to the bottom of scripts -->
+    <script>
+        const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+    
+    </script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

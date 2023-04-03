@@ -43,7 +43,7 @@ header .profile-right-header h4{
     max-height: 100vh;
     min-height: 100vh;
     transition: 0.5s;
-    z-index: 1080;
+    z-index: 1050;
 }
 .left-sidebar::-webkit-scrollbar {
     width: 0;

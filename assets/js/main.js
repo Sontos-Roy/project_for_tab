@@ -28,23 +28,25 @@ $(document).ready(function(){
     var $decrementBtn = $('.decrement');
     var $counter = $('.counter');
 
-    // Set the initial counter value to 0.00
-    var counterValue = 1.0;
-
     // Add a click event listener to the increment button
     $incrementBtn.click(function() {
+      var counter = $(this).closest('div').find('.counter').text();
+      var counterValue = parseFloat(counter);
       counterValue += 1.0;
-      $counter.text(counterValue.toFixed(1));
+      $(this).closest('div').find('.counter').text(counterValue.toFixed(1));
+      // alert($(this).closest('div').find('.counter').text());
     });
 
     // Add a click event listener to the decrement button
     $decrementBtn.click(function() {
+      var counter = $(this).closest('div').find('.counter').text();
+      var counterValue = parseFloat(counter);
       if(counterValue > 1 ){
         counterValue -= 1.0;
       }else{
         alert('You can not decrease Product quantity less then 1 !!!!');
       }
-      $counter.text(counterValue.toFixed(1));
+      $(this).closest('div').find('.counter').text(counterValue.toFixed(1));
     });
     
 
@@ -76,4 +78,31 @@ $(document).ready(function() {
     $('li.category-li > ul > li > a').removeClass('active');
     $(this).addClass('active');
     });
+
+    markAll();
 });
+
+// For Check box
+function markAll(){
+  $('#checkall').change(function(){
+    var checked = $(this).is(':checked');
+
+    if(checked){
+      $('.mark-check').each(function(){
+        $(this).prop('checked', true);
+      })
+    }else{
+      $('.mark-check').each(function(){
+        $(this).prop('checked', false);
+      })
+    }
+  })
+
+  $('.mark-check').change(function(){
+    if($('input.mark-check:checkbox').length == $('input.mark-check:checked').length){
+      $('#checkall').prop('checked', true);
+    }else{
+      $('#checkall').prop('checked', false);
+    }
+  })
+}

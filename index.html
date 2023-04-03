@@ -22,8 +22,10 @@
                     <img src="https://picsum.photos/200/200" alt="">
                 </div>
                 <h4>Super Admin </h4>
-                <div class="logout">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#f90000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17l5-5-5-5M19.8 12H9M10 3H4v18h6"/></svg>
+                <div class="logout pe-4">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#f90000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17l5-5-5-5M19.8 12H9M10 3H4v18h6"/></svg>
+                    </a>
                 </div>
             </div>
         </header>
@@ -59,7 +61,7 @@
                     <a href="#" class="">Cocktail & Juice</a>
                 </li>
                 <li>
-                    <a href="#" class="">Order List</a>
+                    <a href="order-list.html" class="">Order List</a>
                 </li>
                 
             </ul>
@@ -186,25 +188,32 @@
                     </div>
                 </div>
             </div>
-            <div class="right-side">
+            <div class="right-side pe-0">
                 <div class="right-side-arrow-close" id="right-side-arrow-close">
                     <div class="icon">
                         <i class="fas fas fa-arrow-right"></i>
                     </div>
                 </div>
-                <div class="d-flex dropdown mt-4 first-div"><strong>Table : </strong> 
-                    <div class="dropdown-toggle">CIP2-06</div>
-                </div>
                 <div class="d-flex dropdown mt-4 first-div justify-content-between align-items-center"><strong>Table : </strong> 
-                    <div class="flex-fill"><select name="" id="" class="form-select border-0 shadow-none">
+                    <div class="flex-fill">
+                        <select name="" id="" class="form-select border-0 shadow-none">
                         <option value="">CIP2-06</option>
-                    </select></div>
+                            </select>
+                    </div>
                 </div>
-                <div class="d-flex dropdown mt-3"><strong>Chair : </strong> 
-                    <div class="dropdown-toggle">1-B</div>
+                <div class="d-flex dropdown mt-4 first-div justify-content-between align-items-center"><strong>Chair : </strong> 
+                    <div class="flex-fill">
+                        <select name="" id="" class="form-select border-0 shadow-none">
+                        <option value="">1-B</option>
+                            </select>
+                    </div>
                 </div>
-                <div class="d-flex dropdown mt-3"><strong>Service : </strong> 
-                    <div class="dropdown-toggle">SALEH COUNTER</div>
+                <div class="d-flex dropdown mt-4 first-div justify-content-between align-items-center"><strong>Service : </strong> 
+                    <div class="flex-fill">
+                        <select name="" id="" class="form-select border-0 shadow-none">
+                        <option value="">SALEH COUNTER</option>
+                            </select>
+                    </div>
                 </div>
                 <hr>
                 <div class="cart-product">
@@ -214,15 +223,20 @@
                         </div>
                         <div class="c-right flex-fill">
                             <div class="title bold">Chivas Regal 12 Y</div>
-                            <div class="d-flex justify-content-between c-p-content">
+                            <div class="quantity-count d-flex justify-content-between c-p-content">
                                 <div class="d-flex align-items-center justify-content-between">
                                     <button class="btn border rounded-circle c-counter increment">+</button>
-                                    <span class="px-1 bold counter">1.0</span>
+                                    <span class="px-1 bold counter">3.0</span>
                                     <button class="btn border rounded-circle c-counter decrement">-</button>
                                 </div>
                                 <div class="price ps-1">৳ 3000.00</div>
                             </div>
                         </div>
+                        
+                    </div>
+                    <div class="d-flex justify-content-between pt-3">
+                        <h6 class="bold text-success">Sub Total</h6>
+                        <h6 class="bold text-success">৳ 3000.00</h6>
                     </div>
                 </div>
                 <button class="btn btn-warning col-12 order-now-btn">Order Now</button>

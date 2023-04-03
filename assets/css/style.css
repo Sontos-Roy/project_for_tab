@@ -22,6 +22,12 @@
 .bold{
     font-family: var(--pop-bold);
 }
+.bg-light-green{
+    background-color: #00f100 !important;
+}
+.block-select{
+    user-select: none; 
+}
 .main-wrapper{
     width: 100%;
 }
@@ -29,7 +35,7 @@
 
 .right-side{
     border-left: 2px #cecece solid;
-    z-index: 1080;
+    z-index: 1020;
     background-color: white;
     transition: 0.5s;
     min-height: 100vh;
@@ -190,19 +196,23 @@
 }
 .product-list .scroll-true{
     position: relative;
-    max-height: 80vh;
+    max-height: 83vh;
     overflow-y: auto;
+    padding-top: 10px;
 }
-.list-title{
+.list-title, .list-title *, .title{
     font-family: poppins-bold;
     text-transform: uppercase;
+}
+.order-title{
+    font-family: var(--pop-bold);
 }
 .product-row .product{
     margin-bottom: 15px;
 }
 .product-row .product .card{
     padding: 5px;
-    box-shadow: 0px 0px 10px 2px #bebcbc;
+    box-shadow: 0px 0px 10px 2px #bebcbc8a;
 }
 .product-row .product .image{
     width: 100%;
@@ -273,7 +283,7 @@
     left: 0;
     height: 100px;
     width: 100%;
-    z-index: 1090;
+    z-index: 1030;
     background-color: white;
     box-shadow: 0 0 8px 5px rgba(128, 128, 128, 0.425);
     transition: 0.3s;
@@ -348,4 +358,54 @@
 }
 .cat-list .category-li.active a.cat-main::after{
     transform: rotate(90deg);
+}
+
+.table tbody, .table thead{
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.order-list-table tbody td, .order-list-table tbody td *{
+    font-size: 18px;
+    font-family: var(--pop-semibold);
+    text-align: center;
+}
+.modal-order .table tbody td, .modal-order .table tbody td *{
+    font-size: 16px;
+    font-family: var(--pop-semibold);
+    text-align: center;
+}
+
+.modal-header{
+    background: #dbdbdb;
+    border-bottom: 0;
+}
+.modal-order{
+    border-bottom: 2px solid #c2c2c2;
+}
+.modal-order .order{
+    border-bottom: 1px solid rgb(228, 228, 228);
+    border-top: 1px solid rgb(228, 228, 228);
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.modal-order .order *{
+    line-height: 1;
+}
+.modal-order .order .order-content{
+    flex-grow: 1;
+}
+@media (min-width: 576px)
+{
+    .modal-md {
+        max-width: 600px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .modal-lg {
+        max-width: 1000px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }

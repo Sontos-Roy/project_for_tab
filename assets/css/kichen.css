@@ -1,0 +1,15 @@
+.active-red{
+    background: rgb(250, 78, 78);
+}
+.active-red a{
+    color: black;
+}
+.table tr td, .table tr th{
+    border: 1px solid gray;
+}
+.kichen-modal-box{
+    min-height: 20rem;
+}
+h5.list-title{
+    font-size: 20px;
+}
