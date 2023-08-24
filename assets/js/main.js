@@ -58,6 +58,12 @@ $('.bottom-section .top-arrow').on('click', function(){
 
 });
 $(document).ready(function() {
+  $('.return-alert').click(function(){
+    $('.alert-modal-overlay').show();
+  });
+  $('.btn-close-alert').click(function(){
+    $('.alert-modal-overlay').hide();
+  })
   $('.subcategory-menu').hide();
   $('#category-menu li a').on('click', function(e) {
     e.preventDefault();
@@ -106,3 +112,4 @@ function markAll(){
     }
   })
 }
+

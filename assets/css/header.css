@@ -86,8 +86,11 @@ header .profile-right-header h4{
     font-weight: bold;
     font-family: poppins-bold;
 }
-.left-sidebar ul.sidebar-ul li a.active{
-    color: rgb(13, 178, 255);
+.left-sidebar ul.sidebar-ul li.active{
+    background: var(--color3);
+}
+.left-sidebar ul.sidebar-ul li.active a{
+    color: white;
 }
 
 

@@ -6,12 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/media.css">
     <script src="assets/js/jquery.min.js"></script>
+    <style>
+        .swal2-container{
+            z-index: 2000 !important;
+        }
+    </style>
 </head>
 <body>
     <div class="main-wrapper">
@@ -22,7 +27,7 @@
                     <img src="https://picsum.photos/200/200" alt="">
                 </div>
                 <h4>Super Admin </h4>
-                <div class="logout pe-4">
+                <div class="logout">
                     <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#f90000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 17l5-5-5-5M19.8 12H9M10 3H4v18h6"/></svg>
                     </a>
@@ -60,8 +65,8 @@
                 <li>
                     <a href="#" class="">Cocktail & Juice</a>
                 </li>
-                <li>
-                    <a href="order-list.html" class="active">Order List</a>
+                <li class="active">
+                    <a href="order-list.html">Order List</a>
                 </li>
                 
             </ul>
@@ -98,15 +103,15 @@
                                             <a href="#create" data-bs-toggle="modal" class="text-decoration-none">
                                                 <img src="assets/svg/new.svg" alt="Create" width="30">
                                             </a>
-                                            <a href="#" class="text-decoration-none">
+                                            <a href="#show-order" data-bs-toggle="modal" class="text-decoration-none">
                                                 <img src="assets/svg/eye.svg" alt="Create" width="30">
                                             </a>
-                                            <a href="#" class="text-decoration-none">
+                                            <a href="#print-order" data-bs-toggle="modal" class="text-decoration-none">
                                                 <img src="assets/svg/print.svg" alt="Create" width="30">
                                             </a>
                                         </div>
                                     </td>
-                                    <td><a href="#" class="text-decoration-none">Apply</a></td>
+                                    <td><a href="#apply-discount" data-bs-toggle="modal" class="text-decoration-none">Apply</a></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -124,6 +129,41 @@
     </div>
     <div class="bottom-section active">
         <button class="btn top-arrow"><i class="fas fa-angle-double-up"></i></button>
+        <div class="row">
+            <div class="left-side"></div>
+            <div class="middle col-md col-12  row">
+                <div class="col-lg-6 ">
+                    <h5 class="bold ps-2 text-primary">Pending Orders</h5>
+                        <div class="ps-2">
+                            <div class="d-flex">
+                                <h6 class="list-title">Table: <span class="text-info">CIP2-06</span></h6>
+                                <h6 class="list-title ms-2">Chair: <span class="text-info">1-B</span></h6>
+                                <h6 class="list-title ms-2">Invoice#: <span class="text-info">162352</span></h6>
+                            </div>
+                            <div class="d-flex">
+                                <h6 class="list-title">Table: <span class="text-info">CIP2-06</span></h6>
+                                <h6 class="list-title ms-2">Chair: <span class="text-info">1-B</span></h6>
+                                <h6 class="list-title ms-2">Invoice#: <span class="text-info">162352</span></h6>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-lg-6 ">
+                    <h5 class="bold ps-2 text-primary">Preparing Orders</h5>
+                        <div class="ps-2">
+                            <div class="d-flex">
+                                <h6 class="list-title">Table: <span class="text-info">CIP2-06</span></h6>
+                                <h6 class="list-title ms-2">Chair: <span class="text-info">1-B</span></h6>
+                                <h6 class="list-title ms-2">Invoice#: <span class="text-info">162352</span></h6>
+                            </div>
+                            <div class="d-flex">
+                                <h6 class="list-title">Table: <span class="text-info">CIP2-06</span></h6>
+                                <h6 class="list-title ms-2">Chair: <span class="text-info">1-B</span></h6>
+                                <h6 class="list-title ms-2">Invoice#: <span class="text-info">162352</span></h6>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
 
     </div>
     <div class="left-side-arrow" id="left-side-arrow">
@@ -160,10 +200,11 @@
                                 <img src="https://picsum.photos/200/300" alt="" width="60">
                             </div>
                             <div class="order-content ps-2">
-                                <div class="text-end">
-                                    <button class="text-end btn border-0 text-primary bold">Remove <span class="text-danger"><i class="far fa-trash-alt"></i></span></button>   
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="order-title">Johnnie Walker Gold Label (pk)</h5>
+                                    <button class="text-end btn border-0 text-primary bold return-alert">Return <span class="text-danger"><i class="far fa-trash-alt"></i></span></button>   
                                 </div>
-                                <h5 class="order-title">Johnnie Walker Gold Label (pk)</h5>
+                                
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h6 class="bold">Price : <span class="text-danger">৳2000</span></h6>
                                     <div class="d-flex align-items-center">
@@ -186,10 +227,11 @@
                                 <img src="https://picsum.photos/200/300" alt="" width="60">
                             </div>
                             <div class="order-content ps-2">
-                                <div class="text-end">
-                                    <button class="text-end btn border-0 text-primary bold">Remove <span class="text-danger"><i class="far fa-trash-alt"></i></span></button>   
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="order-title">Johnnie Walker Gold Label (pk)</h5>
+                                    <button class="text-end btn border-0 text-primary bold return-alert">Return <span class="text-danger"><i class="far fa-trash-alt"></i></span></button>   
                                 </div>
-                                <h5 class="order-title">Johnnie Walker Gold Label (pk)</h5>
+                                
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h6 class="bold">Price : <span class="text-danger">৳2000</span></h6>
                                     <div class="d-flex align-items-center">
@@ -227,8 +269,198 @@
             </div>
         </div>
     </div>
+    <div class="modal fade" id="show-order" tabindex="-1" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between text-center">
+                    <div></div>
+                    <h5 class="modal-title list-title" id="">Order List</h5>
+                        <button type="button" class="m-0 btn-close rounded-circle bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex">
+                        <h5 class="list-title">Table: <span class="text-info">CIP2-06</span></h5>
+                        <h5 class="list-title ms-2">Chair: <span class="text-info">1-B</span></h5>
+                        <h5 class="list-title ms-2">Invoice#: <span class="text-info">162352</span></h5>
+                    </div>
+                    <div class="orders modal-order">
+                        <div class="order">
+                            <div class="image">
+                                <img src="https://picsum.photos/200/300" alt="" width="60">
+                            </div>
+                            <div class="order-content ps-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="order-title">Johnnie Walker Gold Label (pk)</h5>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="bold">Price : <span class="text-danger">৳2000</span></h6>
+                                </div>
+                                <div class="d-flex">
+                                    <h6 class="bold">Status: <span class="text-info">Pending</span></h6>
+                                    <h6 class="bold ps-2">Timing: <span class="text-info">N/A</span></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order">
+                            <div class="image">
+                                <img src="https://picsum.photos/200/300" alt="" width="60">
+                            </div>
+                            <div class="order-content ps-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="order-title">Johnnie Walker Gold Label (pk)</h5>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h6 class="bold">Price : <span class="text-danger">৳2000</span></h6>
+                                </div>
+                                <div class="d-flex">
+                                    <h6 class="bold">Status: <span class="text-info">Pending</span></h6>
+                                    <h6 class="bold ps-2">Timing: <span class="text-info">N/A</span></h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between pt-2">
+                        <h6 class="text-info bold">Subtotal</h6>
+                        <h6 class="text-info bold">৳2000</h6>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h6 class="text-info bold">Discount</h6>
+                        <h6 class="text-info bold">৳0</h6>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h6 class="text-success bold">Total</h6>
+                        <h6 class="text-success bold">৳2000</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="print-order" tabindex="-1" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between text-center">
+                    <div></div>
+                    <h5 class="modal-title list-title" id="">Print Order</h5>
+                        <button type="button" class="m-0 btn-close rounded-circle bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex justify-content-between">
+                        <h6 class="text-info bold">Discount</h6>
+                        <h6 class="text-info bold">৳0</h6>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h6 class="text-success bold">Total</h6>
+                        <h6 class="text-success bold">৳2000</h6>
+                    </div>
+                </div>
+                <div class="text-center pb-3">
+                    <button class="btn btn-primary bold rounded-5">Print Order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="apply-discount" tabindex="-1" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between text-center">
+                    <div></div>
+                    <h5 class="modal-title list-title" id="">Apply Discount</h5>
+                        <button type="button" class="m-0 btn-close rounded-circle bg-primary" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex dropdown mt-4 first-div justify-content-between align-items-center"><strong>Request Type : </strong> 
+                        <div class="flex-fill">
+                            <select name="" id="" class="form-select border-0 shadow-none">
+                            <option value="">Dicount</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="d-flex dropdown mt-4 first-div justify-content-between align-items-center"><strong>Discount Type : </strong> 
+                        <div class="flex-fill">
+                            <select name="" id="" class="form-select border-0 shadow-none">
+                            <option value="">Percentage</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="d-flex dropdown mt-4 first-div justify-content-between align-items-center"><strong>Name : </strong> 
+                        <div class="flex-fill">
+                            <select name="" id="" class="form-select border-0 shadow-none">
+                            <option value="">Select Name</option>
+                                </select>
+                        </div>
+                    </div>
+                    <div class="mt-4 first-div"><strong>Description : </strong> 
+                        <div class="flex-fill">
+                            <textarea name="" id="" cols="30" rows="5" class="form-control shadow-none"></textarea>
+                        </div>
+                    </div>
+                    <div class="d-flex dropdown mt-4 first-div justify-content-between align-items-center"><strong>Value : </strong> 
+                        <div class="flex-fill">
+                            <input type="text" class="form-control shadow-none border-0" placeholder="Enter Discount Value">
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pb-3">
+                    <button class="btn btn-primary bold rounded-5">Apply Discount</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="alert-modal-overlay">
+        <div class="alert-modal-box">
+            <div class="alert-modal">
+                <div class="card p-3">
+                    <button class="btn-close-alert btn border-0"><h1>&times;</h1></button>
+                    <div class="text-center">
+                        <h4>Alert</h4>
+                        <p>Enter Quantity For Remove</p>
+                        <input type="number" class="form-control shadow-none" placeholder="Enter Quantity">
+                        <button type="submit" class="btn border-0 text-info btn-lg">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
     
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.2/dist/sweetalert2.all.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+            function showInputPrompt() {
+                Swal.fire({
+                title: 'Enter your name',
+                input: 'text',
+                inputPlaceholder: 'Enter your name',
+                showCancelButton: true,
+                confirmButtonText: 'Submit',
+                showLoaderOnConfirm: true,
+                preConfirm: (name) => {
+                    return new Promise((resolve) => {
+                    if (name) {
+                        resolve(name);
+                    } else {
+                        Swal.showValidationMessage('Please enter your name');
+                    }
+                    });
+                },
+                allowOutsideClick: () => !Swal.isLoading()
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                    title: 'Submitted!',
+                    text: 'Your name: ' + result.value,
+                    icon: 'success'
+                    });
+                }
+                });
+            }
+ 
+        
+    </script>
 </body>
 </html>

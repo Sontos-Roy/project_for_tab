@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/kichen.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/media.css">
     <script src="assets/js/jquery.min.js"></script>
@@ -40,14 +39,14 @@
                 </div>
             </div>
             <ul class="sidebar-ul">
-                <li>
-                    <a href="#" class="active">Order :- 1</a>
+                <li class="active">
+                    <a href="order-list.html">Order :- 1</a>
                 </li>
                 <li>
-                    <a href="/" class="">Order Return :- 0</a>
+                    <a href="order-return.html" class="">Order Return :- 0</a>
                 </li>
                 <li>
-                    <a href="#" class="">Transfer Requisition</a>
+                    <a href="#" class="">Stock Accept</a>
                 </li>
                 <li class="active-red">
                     <a href="#">Refresh</a>
@@ -64,7 +63,7 @@
                         <div class="text-center">
                             <h4 class="list-title">Order List</h4>
                         </div>
-                    <div class="table-responsive">
+                    <div class="table-responsive kichen">
                         <table class="table order-list-table">
                             <thead>
                                 <tr>
@@ -107,7 +106,41 @@
     </div>
     <div class="bottom-section active">
         <button class="btn top-arrow"><i class="fas fa-angle-double-up"></i></button>
-
+        <div class="row">
+            <div class="left-side"></div>
+            <div class="middle col-md col-12  row">
+                <div class="col-lg-6 ">
+                    <h5 class="bold ps-2 text-primary">Pending Orders</h5>
+                        <div class="ps-2">
+                            <div class="d-flex">
+                                <h6 class="list-title">Table: <span class="text-info">CIP2-06</span></h6>
+                                <h6 class="list-title ms-2">Chair: <span class="text-info">1-B</span></h6>
+                                <h6 class="list-title ms-2">Invoice#: <span class="text-info">162352</span></h6>
+                            </div>
+                            <div class="d-flex">
+                                <h6 class="list-title">Table: <span class="text-info">CIP2-06</span></h6>
+                                <h6 class="list-title ms-2">Chair: <span class="text-info">1-B</span></h6>
+                                <h6 class="list-title ms-2">Invoice#: <span class="text-info">162352</span></h6>
+                            </div>
+                        </div>
+                </div>
+                <div class="col-lg-6 ">
+                    <h5 class="bold ps-2 text-primary">Preparing Orders</h5>
+                        <div class="ps-2">
+                            <div class="d-flex">
+                                <h6 class="list-title">Table: <span class="text-info">CIP2-06</span></h6>
+                                <h6 class="list-title ms-2">Chair: <span class="text-info">1-B</span></h6>
+                                <h6 class="list-title ms-2">Invoice#: <span class="text-info">162352</span></h6>
+                            </div>
+                            <div class="d-flex">
+                                <h6 class="list-title">Table: <span class="text-info">CIP2-06</span></h6>
+                                <h6 class="list-title ms-2">Chair: <span class="text-info">1-B</span></h6>
+                                <h6 class="list-title ms-2">Invoice#: <span class="text-info">162352</span></h6>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="left-side-arrow" id="left-side-arrow">
         <div class="icon">
